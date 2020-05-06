@@ -44,228 +44,248 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_percent"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_8"
         android:layout_toRightOf="@id/button_8"
-        android:text="@string/button_9"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_8" />
+        android:background="#009688"
+        android:text="@string/button_9" />
 
     <Button
         android:id="@+id/button_1"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_4"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:text="@string/button_1"
-        android:layout_marginStart="20dp" />
+        android:background="#009688"
+        android:text="@string/button_1" />
 
     <Button
         android:id="@+id/button_addition"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_subtraction"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_3"
         android:layout_toRightOf="@id/button_3"
-        android:text="@string/button_add"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_3" />
+        android:background="#009688"
+        android:text="@string/button_add" />
 
     <Button
         android:id="@+id/button_3"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_6"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_2"
         android:layout_toRightOf="@id/button_2"
-        android:text="@string/button_3"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_2" />
+        android:background="#009688"
+        android:text="@string/button_3" />
 
     <Button
         android:id="@+id/button_2"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_5"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_1"
         android:layout_toRightOf="@id/button_1"
-        android:text="@string/button_2"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_1" />
+        android:background="#009688"
+        android:text="@string/button_2" />
 
     <Button
         android:id="@+id/button_decimal"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_1"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:text="@string/button_decimal"
-        android:layout_marginStart="20dp" />
+        android:background="#009688"
+        android:text="@string/button_decimal" />
 
     <Button
         android:id="@+id/button_zero"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_2"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
-        android:layout_toRightOf="@id/button_decimal"
-        android:text="@string/button_0"
         android:layout_toEndOf="@id/button_decimal"
-        android:layout_marginStart="15dp" />
+        android:layout_toRightOf="@id/button_decimal"
+        android:background="#009688"
+        android:text="@string/button_0" />
 
     <Button
         android:id="@+id/button_output"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_addition"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_delete"
         android:layout_toRightOf="@id/button_delete"
-        android:text="@string/button_output"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_delete" />
+        android:background="#009688"
+        android:text="@string/button_output" />
 
     <Button
         android:id="@+id/button_delete"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_3"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_zero"
         android:layout_toRightOf="@id/button_zero"
-        android:text="@string/button_del"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_zero" />
+        android:background="#009688"
+        android:text="@string/button_del" />
 
     <Button
         android:id="@+id/button_clear"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/textView"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
-        android:text="@string/button_clr"
-        android:layout_marginStart="20dp" />
+        android:background="#009688"
+        android:text="@string/button_clr" />
 
     <Button
         android:id="@+id/button_braces"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/textView"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="25dp"
+        android:layout_toEndOf="@id/button_clear"
         android:layout_toRightOf="@id/button_clear"
-        android:text="@string/button_braces"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_clear" />
+        android:background="#009688"
+        android:text="@string/button_braces" />
 
     <Button
         android:id="@+id/button_division"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/textView"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="25dp"
+        android:layout_toEndOf="@id/button_percent"
         android:layout_toRightOf="@id/button_percent"
-        android:text="@string/button_division"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_percent" />
+        android:background="#009688"
+        android:text="@string/button_division" />
 
     <Button
         android:id="@+id/button_4"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_7"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:text="@string/button_4"
-        android:layout_marginStart="20dp" />
+        android:background="#009688"
+        android:text="@string/button_4" />
 
     <Button
         android:id="@+id/button_5"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_8"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_4"
         android:layout_toRightOf="@id/button_4"
-        android:text="@string/button_5"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_4" />
+        android:background="#009688"
+        android:text="@string/button_5" />
 
     <Button
         android:id="@+id/button_subtraction"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_multiplication"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_6"
         android:layout_toRightOf="@id/button_6"
-        android:text="@string/button_subtraction"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_6" />
+        android:background="#009688"
+        android:text="@string/button_subtraction" />
 
     <Button
         android:id="@+id/button_6"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_9"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_5"
         android:layout_toRightOf="@id/button_5"
-        android:text="@string/button_6"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_5" />
+        android:background="#009688"
+        android:text="@string/button_6" />
 
     <Button
         android:id="@+id/button_7"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_clear"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:text="@string/button_7"
-        android:layout_marginStart="20dp" />
+        android:background="#009688"
+        android:text="@string/button_7" />
 
     <Button
         android:id="@+id/button_8"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_braces"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_7"
         android:layout_toRightOf="@id/button_7"
-        android:text="@string/button_8"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_7" />
+        android:background="#009688"
+        android:text="@string/button_8" />
 
     <Button
         android:id="@+id/button_percent"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/textView"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="25dp"
+        android:layout_toEndOf="@id/button_braces"
         android:layout_toRightOf="@id/button_braces"
-        android:text="@string/button_percentage"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_braces" />
+        android:background="#009688"
+        android:text="@string/button_percentage" />
 
     <Button
         android:id="@+id/button_multiplication"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button_division"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/button_9"
         android:layout_toRightOf="@id/button_9"
-        android:text="@string/button_multiply"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@id/button_9" />
+        android:background="#009688"
+        android:text="@string/button_multiply" />
 </RelativeLayout>
