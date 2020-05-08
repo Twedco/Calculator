@@ -14,13 +14,10 @@
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="114dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@android:color/transparent"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/innershadow_text"
             android:ems="10"
             android:inputType="textPersonName"
             android:outlineAmbientShadowColor="#000000"
@@ -34,11 +31,10 @@
             android:layout_width="406dp"
             android:layout_height="61dp"
             android:layout_below="@id/editText"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/innershadow_output"
             android:text="@string/output"
             android:textSize="36sp" />
     </RelativeLayout>
@@ -73,13 +69,16 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineAmbientShadowColor="#000000"
                 android:outlineSpotShadowColor="#000000"
-                android:shadowColor="#0B0B0B"
+                android:shadowColor="#000000"
                 android:text="@string/button_clr"
-                android:textStyle="bold" />
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_braces"
@@ -95,12 +94,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_clear"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_braces"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_percent"
@@ -117,12 +118,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_braces"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_percentage"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_division"
@@ -138,12 +141,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_percent"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_division"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_7"
@@ -159,12 +164,14 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_7"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_8"
@@ -181,12 +188,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_7"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_8"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="20dp"
+                android:translationZ="10dp"/>
 
             <Button
                 android:id="@+id/button_9"
@@ -203,12 +212,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_8"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_9"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_multiplication"
@@ -225,12 +236,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_9"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_multiply"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="20dp"
+                android:translationZ="10dp"/>
 
             <Button
                 android:id="@+id/button_4"
@@ -246,12 +259,14 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_4"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_5"
@@ -268,12 +283,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_4"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_5"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="20dp"
+                android:translationZ="10dp"/>
 
             <Button
                 android:id="@+id/button_6"
@@ -290,12 +307,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_5"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_6"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="20dp"
+                android:translationZ="10dp"/>
 
             <Button
                 android:id="@+id/button_subtraction"
@@ -312,12 +331,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_6"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_subtraction"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="20dp"
+                android:translationZ="10dp"/>
 
             <Button
                 android:id="@+id/button_1"
@@ -333,12 +354,14 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_1"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_2"
@@ -355,12 +378,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_1"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_2"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="20dp"
+                android:translationZ="10dp"/>
 
             <Button
                 android:id="@+id/button_3"
@@ -377,12 +402,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_2"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_addition"
@@ -399,12 +426,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_3"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_add"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_decimal"
@@ -420,12 +449,14 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_decimal"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_zero"
@@ -442,12 +473,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_decimal"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_0"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_delete"
@@ -464,12 +497,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_zero"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_del"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
 
             <Button
                 android:id="@+id/button_output"
@@ -486,12 +521,14 @@
                 android:layout_marginRight="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_toRightOf="@id/button_delete"
-                android:background="#FFFFFF"
+                android:background="@drawable/btn_rounded"
+                android:elevation="20dp"
                 android:ellipsize="middle"
                 android:outlineSpotShadowColor="#000000"
                 android:shadowColor="#0B0B0B"
                 android:text="@string/button_output"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="10dp" />
         </RelativeLayout>
 
 

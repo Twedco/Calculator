@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.text.DecimalFormat;
 //commit
 public class MainActivity extends AppCompatActivity {
+
     private Button btn9;
     private Button btn8;
     private Button btn7;
@@ -31,20 +33,16 @@ public class MainActivity extends AppCompatActivity {
     private Button btnOut;
     private TextView txtV;
     private EditText edtT;
-    private double num1;
-    private double num2;
-    private char EXECUTE;
-    private final char ADD ='+';
-    private final char SUB ='-';
-    private final char DIV ='/';
-    private final char MUL ='*';
-    private final char OUT ='=';
-    private final char PER ='%';
+    float num1,num2;
+    boolean ADD,SUB,DIV,MUL,PER;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Button btn9 = (Button) findViewById(R.id.button_9);
         Button btn8 = (Button) findViewById(R.id.button_8);
         Button btn7 = (Button) findViewById(R.id.button_7);
@@ -60,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnAdd = (Button) findViewById(R.id.button_addition);
         Button btnSub = (Button) findViewById(R.id.button_subtraction);
         Button btnClr = (Button) findViewById(R.id.button_clear);
+        Button btnDel = (Button)findViewById(R.id.button_delete);
         Button btnDec = (Button) findViewById(R.id.button_decimal);
         Button btnBra = (Button) findViewById(R.id.button_braces);
         Button btnPer = (Button) findViewById(R.id.button_percent);
@@ -71,171 +70,183 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"9");
+                edtT.setText(edtT.getText() + "9");
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"8");
+                edtT.setText(edtT.getText() + "8");
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"7");
+                edtT.setText(edtT.getText() + "7");
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"6");
+                edtT.setText(edtT.getText() + "6");
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"5");
+                edtT.setText(edtT.getText() + "5");
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"4");
+                edtT.setText(edtT.getText() + "4");
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"3");
+                edtT.setText(edtT.getText() + "3");
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"2");
+                edtT.setText(edtT.getText() + "2");
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"1");
+                edtT.setText(edtT.getText() + "1");
             }
         });
         btn0.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edtT.setText(edtT.getText().toString()+"0");
+                edtT.setText(edtT.getText() + "0");
+            }
+        });
+
+        btnDec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {          edtT.setText(edtT.getText() + ".");
+            }
+        });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                if (edtT == null){
+                    edtT.setText("");
+                }else {
+                    num1 = Float.parseFloat(edtT.getText() + "");
+                    ADD = true;
+                    edtT.setText(null);
+                }
             }
         });
         btnMul.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
-            public void onClick(View v) {
-                EXECUTE = MUL;
-                compute();
-                txtV.setText(String.valueOf(num1)+"*");
+            public void onClick(View v){
+                num1 = Float.parseFloat(edtT.getText() + "");
+                MUL = true ;
+                txtV.setText((num1)+"*");
                 edtT.setText(null);
             }
         });
         btnDiv.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
-            public void onClick(View v) {
-                EXECUTE = DIV;
-                compute();
-                txtV.setText(String.valueOf(num1)+"/");
+            public void onClick(View v){
+                num1 = Float.parseFloat(edtT.getText() + "");
+                DIV = true ;
                 edtT.setText(null);
             }
+
         });
         btnSub.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
             public void onClick(View v) {
-                EXECUTE = SUB;
-                compute();
-                txtV.setText(String.valueOf(num1)+"-");
+                num1 = Float.parseFloat(edtT.getText() + "");
+                SUB = true ;
                 edtT.setText(null);
             }
         });
         ///percentage
         btnPer.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                EXECUTE = PER;
-                compute();
-                txtV.setText(String.valueOf(num1));
+            public void onClick(View v){
+                num1 = Float.parseFloat(edtT.getText() + "");
+                PER = true ;
                 edtT.setText(null);
             }
         });
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View v) {
-                EXECUTE = ADD;
-                compute();
-                txtV.setText(String.valueOf(num1)+"+");
-                edtT.setText(null);
-            }
-        });
+
         btnOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
-                EXECUTE = OUT;
-                txtV.setText(String.valueOf(num1));
-                edtT.setText(null);
+                num2 = Float.parseFloat(edtT.getText() + "");
+                if (ADD == true) {
+
+                    edtT.setText(num1 + num2 + "");
+                    ADD = false;
+                }
+
+
+                if (SUB == true) {
+                    edtT.setText(num1 - num2 + "");
+                    SUB = false;
+                }
+
+                if (MUL == true) {
+                    edtT.setText(num1 * num2 + "");
+                    MUL = false;
+                }
+
+                if (DIV == true) {
+                    edtT.setText(num1 / num2 + "");
+                    DIV = false;
+                }
+                if (PER == true) {
+                    edtT.setText(num1 / 100 + "");
+                    PER = false;
+                }
             }
         });
-        btnClr.setOnClickListener(new View.OnClickListener() {
+        btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edtT.getText().length()>0){
+                if (edtT.getText().length() > 0) {
                     CharSequence name = edtT.getText().toString();
-                    edtT.setText((name.subSequence(0, name.length()-1)));
-                }else{
-                    num1 =Double.NaN;
-                    num2=Double.NaN;
+                    edtT.setText((name.subSequence(0, name.length() - 1)));
+                } else {
+                    num1 = Float.NaN;
+                    num2 = Float.NaN;
                     edtT.setText(null);
                     txtV.setText(null);
                 }
             }
         });
+        btnClr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtV.setText("");
+                edtT.setText("");
+            }
+        });
     }
-
-
-    private void compute() {
-
-        switch (EXECUTE) {
-            case ADD:
-                num1 = num1 + num2;
-                break;
-            case SUB:
-                num1 = num1 - num2;
-                break;
-            case DIV:
-                num1 = num1 / num2;
-                break;
-            case MUL:
-                num1 = num1 * num2;
-                break;
-            case PER:
-                num1 = num1/100;
-                break;
-            case OUT:
-                break;
-
-        }
-    }
-
 
 }
