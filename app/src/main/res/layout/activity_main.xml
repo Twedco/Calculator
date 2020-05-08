@@ -19,11 +19,11 @@
             android:layout_marginRight="25dp"
             android:background="@drawable/innershadow_text"
             android:ems="10"
-            android:inputType="textPersonName"
             android:outlineAmbientShadowColor="#000000"
             android:outlineSpotShadowColor="#000000"
             android:shadowColor="#000000"
             android:text="@string/input"
+            android:inputType="number"
             android:textSize="36sp" />
 
         <TextView
