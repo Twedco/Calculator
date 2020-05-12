@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     num1 = Float.parseFloat(edtT.getText() + "");
                     ADD = true;
                     edtT.setText(null);
+                    txtV.setText((num1)+"+");
                 }
             }
         });
@@ -173,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = Float.parseFloat(edtT.getText() + "");
                 DIV = true ;
                 edtT.setText(null);
+                txtV.setText((num1)+"/");
             }
 
         });
@@ -183,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = Float.parseFloat(edtT.getText() + "");
                 SUB = true ;
                 edtT.setText(null);
+                txtV.setText((num1)+"-");
             }
         });
         ///percentage
@@ -192,37 +195,47 @@ public class MainActivity extends AppCompatActivity {
                 num1 = Float.parseFloat(edtT.getText() + "");
                 PER = true ;
                 edtT.setText(null);
+                txtV.setText((num1)+"%");
             }
         });
 
         btnOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                num2 = Float.parseFloat(edtT.getText() + "");
-                if (ADD == true) {
+                if(PER == true){
+                    PER = false;
+                    edtT.setText(num1+"%");
+                    txtV.setText(null);
+                    edtT.setText(null);
+                }
 
+                if (ADD == true) {
+                    num2 = Float.parseFloat(edtT.getText() + "");
+                    txtV.setText((num1)+"+"+(num2));
                     edtT.setText(num1 + num2 + "");
                     ADD = false;
                 }
 
 
                 if (SUB == true) {
+                    num2 = Float.parseFloat(edtT.getText() + "");
+                    txtV.setText((num1)+"-"+(num2));
                     edtT.setText(num1 - num2 + "");
                     SUB = false;
                 }
 
                 if (MUL == true) {
+                    num2 = Float.parseFloat(edtT.getText() + "");
+                    txtV.setText((num1)+"*"+(num2));
                     edtT.setText(num1 * num2 + "");
                     MUL = false;
                 }
 
                 if (DIV == true) {
+                    num2 = Float.parseFloat(edtT.getText() + "");
+                    txtV.setText((num1)+"/"+(num2));
                     edtT.setText(num1 / num2 + "");
                     DIV = false;
-                }
-                if (PER == true) {
-                    edtT.setText(num1 / 100 + "");
-                    PER = false;
                 }
             }
         });
