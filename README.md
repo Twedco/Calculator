@@ -1,3 +1,2 @@
-Simple Arithmetic Calculator 
-Relative Layout with Addition,Multiplication, Subtraction, Division.
-# Calculator
+# Calculator Mobile App
+Simple Arithmetic Calculator Mobile application using Java with relative layout
